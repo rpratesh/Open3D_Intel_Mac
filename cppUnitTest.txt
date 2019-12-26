@@ -1,0 +1,552 @@
+[==========] Running 233 tests from 25 test suites.
+[----------] Global test environment set-up.
+[----------] 11 tests from PinholeCameraIntrinsic
+[ RUN      ] PinholeCameraIntrinsic.Constructor_Default
+[       OK ] PinholeCameraIntrinsic.Constructor_Default (0 ms)
+[ RUN      ] PinholeCameraIntrinsic.Constructor_PrimeSenseDefault
+[       OK ] PinholeCameraIntrinsic.Constructor_PrimeSenseDefault (0 ms)
+[ RUN      ] PinholeCameraIntrinsic.Constructor_Kinect2DepthCameraDefault
+[       OK ] PinholeCameraIntrinsic.Constructor_Kinect2DepthCameraDefault (0 ms)
+[ RUN      ] PinholeCameraIntrinsic.Constructor_Kinect2ColorCameraDefault
+[       OK ] PinholeCameraIntrinsic.Constructor_Kinect2ColorCameraDefault (0 ms)
+[ RUN      ] PinholeCameraIntrinsic.Constructor_Init
+[       OK ] PinholeCameraIntrinsic.Constructor_Init (0 ms)
+[ RUN      ] PinholeCameraIntrinsic.SetIntrinsics
+[       OK ] PinholeCameraIntrinsic.SetIntrinsics (0 ms)
+[ RUN      ] PinholeCameraIntrinsic.GetFocalLength
+[       OK ] PinholeCameraIntrinsic.GetFocalLength (0 ms)
+[ RUN      ] PinholeCameraIntrinsic.GetPrincipalPoint
+[       OK ] PinholeCameraIntrinsic.GetPrincipalPoint (0 ms)
+[ RUN      ] PinholeCameraIntrinsic.GetSkew
+[       OK ] PinholeCameraIntrinsic.GetSkew (0 ms)
+[ RUN      ] PinholeCameraIntrinsic.IsValid
+[       OK ] PinholeCameraIntrinsic.IsValid (0 ms)
+[ RUN      ] PinholeCameraIntrinsic.ConvertToFromJsonValue
+[       OK ] PinholeCameraIntrinsic.ConvertToFromJsonValue (0 ms)
+[----------] 11 tests from PinholeCameraIntrinsic (0 ms total)
+
+[----------] 1 test from PinholeCameraTrajectory
+[ RUN      ] PinholeCameraTrajectory.ConvertToFromJsonValue
+[       OK ] PinholeCameraTrajectory.ConvertToFromJsonValue (0 ms)
+[----------] 1 test from PinholeCameraTrajectory (0 ms total)
+
+[----------] 2 tests from ImageWarpingField
+[ RUN      ] ImageWarpingField.QueryFlow
+[       OK ] ImageWarpingField.QueryFlow (0 ms)
+[ RUN      ] ImageWarpingField.GetImageWarpingField
+[       OK ] ImageWarpingField.GetImageWarpingField (0 ms)
+[----------] 2 tests from ImageWarpingField (0 ms total)
+
+[----------] 17 tests from HalfEdgeTriangleMesh
+[ RUN      ] HalfEdgeTriangleMesh.Constructor_TwoTriangles
+[       OK ] HalfEdgeTriangleMesh.Constructor_TwoTriangles (0 ms)
+[ RUN      ] HalfEdgeTriangleMesh.Constructor_Hexagon
+[       OK ] HalfEdgeTriangleMesh.Constructor_Hexagon (0 ms)
+[ RUN      ] HalfEdgeTriangleMesh.Constructor_PartialHexagon
+[       OK ] HalfEdgeTriangleMesh.Constructor_PartialHexagon (0 ms)
+[ RUN      ] HalfEdgeTriangleMesh.Constructor_Sphere
+[       OK ] HalfEdgeTriangleMesh.Constructor_Sphere (2 ms)
+[ RUN      ] HalfEdgeTriangleMesh.OrderedHalfEdgesFromVertex_TwoTriangles
+[       OK ] HalfEdgeTriangleMesh.OrderedHalfEdgesFromVertex_TwoTriangles (0 ms)
+[ RUN      ] HalfEdgeTriangleMesh.OrderedHalfEdgesFromVertex_Hexagon
+[       OK ] HalfEdgeTriangleMesh.OrderedHalfEdgesFromVertex_Hexagon (0 ms)
+[ RUN      ] HalfEdgeTriangleMesh.OrderedHalfEdgesFromVertex_PartialHexagon
+[       OK ] HalfEdgeTriangleMesh.OrderedHalfEdgesFromVertex_PartialHexagon (0 ms)
+[ RUN      ] HalfEdgeTriangleMesh.BoundaryHalfEdgesFromVertex_TwoTriangles
+[       OK ] HalfEdgeTriangleMesh.BoundaryHalfEdgesFromVertex_TwoTriangles (1 ms)
+[ RUN      ] HalfEdgeTriangleMesh.BoundaryHalfEdgesFromVertex_Hexagon
+[       OK ] HalfEdgeTriangleMesh.BoundaryHalfEdgesFromVertex_Hexagon (0 ms)
+[ RUN      ] HalfEdgeTriangleMesh.BoundaryHalfEdgesFromVertex_PartialHexagon
+[       OK ] HalfEdgeTriangleMesh.BoundaryHalfEdgesFromVertex_PartialHexagon (0 ms)
+[ RUN      ] HalfEdgeTriangleMesh.BoundaryVerticesFromVertex_TwoTriangles
+[       OK ] HalfEdgeTriangleMesh.BoundaryVerticesFromVertex_TwoTriangles (0 ms)
+[ RUN      ] HalfEdgeTriangleMesh.BoundaryVerticesFromVertex_Hexagon
+[       OK ] HalfEdgeTriangleMesh.BoundaryVerticesFromVertex_Hexagon (0 ms)
+[ RUN      ] HalfEdgeTriangleMesh.BoundaryVerticesFromVertex_PartialHexagon
+[       OK ] HalfEdgeTriangleMesh.BoundaryVerticesFromVertex_PartialHexagon (0 ms)
+[ RUN      ] HalfEdgeTriangleMesh.GetBoundaries_TwoTriangles
+[       OK ] HalfEdgeTriangleMesh.GetBoundaries_TwoTriangles (0 ms)
+[ RUN      ] HalfEdgeTriangleMesh.GetBoundaries_Hexagon
+[       OK ] HalfEdgeTriangleMesh.GetBoundaries_Hexagon (0 ms)
+[ RUN      ] HalfEdgeTriangleMesh.GetBoundaries_PartialHexagon
+[       OK ] HalfEdgeTriangleMesh.GetBoundaries_PartialHexagon (0 ms)
+[ RUN      ] HalfEdgeTriangleMesh.GetBoundaries_FourTrianglesDisconnect
+[       OK ] HalfEdgeTriangleMesh.GetBoundaries_FourTrianglesDisconnect (0 ms)
+[----------] 17 tests from HalfEdgeTriangleMesh (4 ms total)
+
+[----------] 34 tests from Image
+[ RUN      ] Image.DefaultConstructor
+[       OK ] Image.DefaultConstructor (0 ms)
+[ RUN      ] Image.CreateImage
+[       OK ] Image.CreateImage (4 ms)
+[ RUN      ] Image.Clear
+[       OK ] Image.Clear (0 ms)
+[ RUN      ] Image.FloatValueAt
+[       OK ] Image.FloatValueAt (0 ms)
+[ RUN      ] Image.CreateDepthToCameraDistanceMultiplierFloatImage
+[       OK ] Image.CreateDepthToCameraDistanceMultiplierFloatImage (1 ms)
+[ RUN      ] Image.CreateFloatImage_1_1
+[       OK ] Image.CreateFloatImage_1_1 (0 ms)
+[ RUN      ] Image.CreateFloatImage_1_2
+[       OK ] Image.CreateFloatImage_1_2 (0 ms)
+[ RUN      ] Image.CreateFloatImage_1_4
+[       OK ] Image.CreateFloatImage_1_4 (0 ms)
+[ RUN      ] Image.CreateFloatImage_3_1_Weighted
+[       OK ] Image.CreateFloatImage_3_1_Weighted (0 ms)
+[ RUN      ] Image.CreateFloatImage_3_1_Equal
+[       OK ] Image.CreateFloatImage_3_1_Equal (0 ms)
+[ RUN      ] Image.CreateFloatImage_3_2_Weighted
+[       OK ] Image.CreateFloatImage_3_2_Weighted (0 ms)
+[ RUN      ] Image.CreateFloatImage_3_2_Equal
+[       OK ] Image.CreateFloatImage_3_2_Equal (0 ms)
+[ RUN      ] Image.CreateFloatImage_3_4_Weighted
+[       OK ] Image.CreateFloatImage_3_4_Weighted (0 ms)
+[ RUN      ] Image.CreateFloatImage_3_4_Equal
+[       OK ] Image.CreateFloatImage_3_4_Equal (0 ms)
+[ RUN      ] Image.PointerAt
+[       OK ] Image.PointerAt (0 ms)
+[ RUN      ] Image.ConvertDepthToFloatImage
+[       OK ] Image.ConvertDepthToFloatImage (0 ms)
+[ RUN      ] Image.TransposeUint8
+[       OK ] Image.TransposeUint8 (0 ms)
+[ RUN      ] Image.TransposeFloat
+[       OK ] Image.TransposeFloat (0 ms)
+[ RUN      ] Image.FlipVerticalImage
+[       OK ] Image.FlipVerticalImage (0 ms)
+[ RUN      ] Image.FlipHorizontalImage
+[       OK ] Image.FlipHorizontalImage (0 ms)
+[ RUN      ] Image.Filter_Gaussian3
+[       OK ] Image.Filter_Gaussian3 (0 ms)
+[ RUN      ] Image.Filter_Gaussian5
+[       OK ] Image.Filter_Gaussian5 (0 ms)
+[ RUN      ] Image.Filter_Gaussian7
+[       OK ] Image.Filter_Gaussian7 (0 ms)
+[ RUN      ] Image.Filter_Sobel3Dx
+[       OK ] Image.Filter_Sobel3Dx (0 ms)
+[ RUN      ] Image.Filter_Sobel3Dy
+[       OK ] Image.Filter_Sobel3Dy (0 ms)
+[ RUN      ] Image.FilterHorizontal
+[       OK ] Image.FilterHorizontal (1 ms)
+[ RUN      ] Image.Downsample
+[       OK ] Image.Downsample (0 ms)
+[ RUN      ] Image.Dilate
+[       OK ] Image.Dilate (0 ms)
+[ RUN      ] Image.LinearTransform
+[       OK ] Image.LinearTransform (0 ms)
+[ RUN      ] Image.ClipIntensity
+[       OK ] Image.ClipIntensity (0 ms)
+[ RUN      ] Image.CreateImageFromFloatImage_8bit
+[       OK ] Image.CreateImageFromFloatImage_8bit (0 ms)
+[ RUN      ] Image.CreateImageFromFloatImage_16bit
+[       OK ] Image.CreateImageFromFloatImage_16bit (0 ms)
+[ RUN      ] Image.FilterPyramid
+[       OK ] Image.FilterPyramid (0 ms)
+[ RUN      ] Image.CreatePyramid
+[       OK ] Image.CreatePyramid (0 ms)
+[----------] 34 tests from Image (6 ms total)
+
+[----------] 3 tests from IntersectionTest
+[ RUN      ] IntersectionTest.PointsCoplanar
+[       OK ] IntersectionTest.PointsCoplanar (0 ms)
+[ RUN      ] IntersectionTest.LinesMinimumDistance
+[       OK ] IntersectionTest.LinesMinimumDistance (0 ms)
+[ RUN      ] IntersectionTest.LineSegmentsMinimumDistance
+[       OK ] IntersectionTest.LineSegmentsMinimumDistance (0 ms)
+[----------] 3 tests from IntersectionTest (0 ms total)
+
+[----------] 3 tests from KDTreeFlann
+[ RUN      ] KDTreeFlann.SearchKNN
+[       OK ] KDTreeFlann.SearchKNN (0 ms)
+[ RUN      ] KDTreeFlann.SearchRadius
+[       OK ] KDTreeFlann.SearchRadius (0 ms)
+[ RUN      ] KDTreeFlann.SearchHybrid
+[       OK ] KDTreeFlann.SearchHybrid (0 ms)
+[----------] 3 tests from KDTreeFlann (0 ms total)
+
+[----------] 14 tests from LineSet
+[ RUN      ] LineSet.Constructor
+[       OK ] LineSet.Constructor (0 ms)
+[ RUN      ] LineSet.Clear
+[       OK ] LineSet.Clear (0 ms)
+[ RUN      ] LineSet.IsEmpty
+[       OK ] LineSet.IsEmpty (0 ms)
+[ RUN      ] LineSet.GetMinBound
+[       OK ] LineSet.GetMinBound (0 ms)
+[ RUN      ] LineSet.GetMaxBound
+[       OK ] LineSet.GetMaxBound (0 ms)
+[ RUN      ] LineSet.Transform
+[       OK ] LineSet.Transform (0 ms)
+[ RUN      ] LineSet.PaintUniformColor
+[       OK ] LineSet.PaintUniformColor (0 ms)
+[ RUN      ] LineSet.OperatorAppend
+[       OK ] LineSet.OperatorAppend (0 ms)
+[ RUN      ] LineSet.OperatorADD
+[       OK ] LineSet.OperatorADD (0 ms)
+[ RUN      ] LineSet.HasPoints
+[       OK ] LineSet.HasPoints (0 ms)
+[ RUN      ] LineSet.HasLines
+[       OK ] LineSet.HasLines (0 ms)
+[ RUN      ] LineSet.HasColors
+[       OK ] LineSet.HasColors (0 ms)
+[ RUN      ] LineSet.GetLineCoordinate
+[       OK ] LineSet.GetLineCoordinate (0 ms)
+[ RUN      ] LineSet.CreateLineSetFromPointCloudCorrespondences
+[       OK ] LineSet.CreateLineSetFromPointCloudCorrespondences (0 ms)
+[----------] 14 tests from LineSet (0 ms total)
+
+[----------] 14 tests from Octree
+[ RUN      ] Octree.ConstructorWithoutSize
+[       OK ] Octree.ConstructorWithoutSize (0 ms)
+[ RUN      ] Octree.ConstructorWithSize
+[       OK ] Octree.ConstructorWithSize (0 ms)
+[ RUN      ] Octree.ZeroDepth
+[       OK ] Octree.ZeroDepth (0 ms)
+[ RUN      ] Octree.ZeroDepthOutOfBound
+[       OK ] Octree.ZeroDepthOutOfBound (0 ms)
+[ RUN      ] Octree.ZeroDepthValueOverwrite
+[       OK ] Octree.ZeroDepthValueOverwrite (0 ms)
+[ RUN      ] Octree.EightCubes
+[       OK ] Octree.EightCubes (1 ms)
+[ RUN      ] Octree.EightCubesTraverse
+[       OK ] Octree.EightCubesTraverse (0 ms)
+[ RUN      ] Octree.FragmentPLYCheckClone
+[       OK ] Octree.FragmentPLYCheckClone (274 ms)
+[ RUN      ] Octree.EqualOperatorSpecialCase
+[       OK ] Octree.EqualOperatorSpecialCase (0 ms)
+[ RUN      ] Octree.FragmentPLYLocate
+[       OK ] Octree.FragmentPLYLocate (697 ms)
+[ RUN      ] Octree.ConvertFromPointCloudBoundSinglePoint
+[       OK ] Octree.ConvertFromPointCloudBoundSinglePoint (0 ms)
+[ RUN      ] Octree.ConvertFromPointCloudBoundTwoPoints
+[       OK ] Octree.ConvertFromPointCloudBoundTwoPoints (0 ms)
+[ RUN      ] Octree.Visualization
+[       OK ] Octree.Visualization (295 ms)
+[ RUN      ] Octree.ConvertToJsonValue
+[       OK ] Octree.ConvertToJsonValue (278 ms)
+[----------] 14 tests from Octree (1545 ms total)
+
+[----------] 28 tests from PointCloud
+[ RUN      ] PointCloud.Constructor
+[       OK ] PointCloud.Constructor (0 ms)
+[ RUN      ] PointCloud.Clear
+[       OK ] PointCloud.Clear (0 ms)
+[ RUN      ] PointCloud.IsEmpty
+[       OK ] PointCloud.IsEmpty (0 ms)
+[ RUN      ] PointCloud.GetMinBound
+[       OK ] PointCloud.GetMinBound (0 ms)
+[ RUN      ] PointCloud.GetMaxBound
+[       OK ] PointCloud.GetMaxBound (0 ms)
+[ RUN      ] PointCloud.Transform
+[       OK ] PointCloud.Transform (0 ms)
+[ RUN      ] PointCloud.HasPoints
+[       OK ] PointCloud.HasPoints (0 ms)
+[ RUN      ] PointCloud.HasNormals
+[       OK ] PointCloud.HasNormals (0 ms)
+[ RUN      ] PointCloud.HasColors
+[       OK ] PointCloud.HasColors (0 ms)
+[ RUN      ] PointCloud.NormalizeNormals
+[       OK ] PointCloud.NormalizeNormals (0 ms)
+[ RUN      ] PointCloud.PaintUniformColor
+[       OK ] PointCloud.PaintUniformColor (0 ms)
+[ RUN      ] PointCloud.OperatorAppend
+[       OK ] PointCloud.OperatorAppend (0 ms)
+[ RUN      ] PointCloud.OperatorADD
+[       OK ] PointCloud.OperatorADD (0 ms)
+[ RUN      ] PointCloud.SelectDownSample
+[       OK ] PointCloud.SelectDownSample (0 ms)
+[ RUN      ] PointCloud.VoxelDownSample
+[       OK ] PointCloud.VoxelDownSample (0 ms)
+[ RUN      ] PointCloud.UniformDownSample
+[       OK ] PointCloud.UniformDownSample (0 ms)
+[ RUN      ] PointCloud.CropPointCloud
+[       OK ] PointCloud.CropPointCloud (1 ms)
+[ RUN      ] PointCloud.EstimateNormals
+[       OK ] PointCloud.EstimateNormals (0 ms)
+[ RUN      ] PointCloud.OrientNormalsToAlignWithDirection
+[       OK ] PointCloud.OrientNormalsToAlignWithDirection (0 ms)
+[ RUN      ] PointCloud.OrientNormalsTowardsCameraLocation
+[       OK ] PointCloud.OrientNormalsTowardsCameraLocation (0 ms)
+[ RUN      ] PointCloud.ComputePointCloudToPointCloudDistance
+[       OK ] PointCloud.ComputePointCloudToPointCloudDistance (0 ms)
+[ RUN      ] PointCloud.ComputePointCloudMeanAndCovariance
+[       OK ] PointCloud.ComputePointCloudMeanAndCovariance (0 ms)
+[ RUN      ] PointCloud.ComputePointCloudMahalanobisDistance
+[       OK ] PointCloud.ComputePointCloudMahalanobisDistance (0 ms)
+[ RUN      ] PointCloud.ComputePointCloudNearestNeighborDistance
+[       OK ] PointCloud.ComputePointCloudNearestNeighborDistance (0 ms)
+[ RUN      ] PointCloud.CreatePointCloudFromDepthImage
+[       OK ] PointCloud.CreatePointCloudFromDepthImage (0 ms)
+[ RUN      ] PointCloud.CreatePointCloudFromRGBDImage_3_1
+[       OK ] PointCloud.CreatePointCloudFromRGBDImage_3_1 (0 ms)
+[ RUN      ] PointCloud.CreatePointCloudFromRGBDImage_1_4
+[       OK ] PointCloud.CreatePointCloudFromRGBDImage_1_4 (0 ms)
+[ RUN      ] PointCloud.SegmentPlane
+[       OK ] PointCloud.SegmentPlane (0 ms)
+[----------] 28 tests from PointCloud (1 ms total)
+
+[----------] 8 tests from RGBDImage
+[ RUN      ] RGBDImage.Constructor
+[       OK ] RGBDImage.Constructor (0 ms)
+[ RUN      ] RGBDImage.CreateFromColorAndDepth
+[       OK ] RGBDImage.CreateFromColorAndDepth (0 ms)
+[ RUN      ] RGBDImage.CreateFromRedwoodFormat
+[       OK ] RGBDImage.CreateFromRedwoodFormat (0 ms)
+[ RUN      ] RGBDImage.CreateFromTUMFormat
+[       OK ] RGBDImage.CreateFromTUMFormat (0 ms)
+[ RUN      ] RGBDImage.CreateFromSUNFormat
+[       OK ] RGBDImage.CreateFromSUNFormat (0 ms)
+[ RUN      ] RGBDImage.CreateFromNYUFormat
+[       OK ] RGBDImage.CreateFromNYUFormat (0 ms)
+[ RUN      ] RGBDImage.FilterPyramid
+[       OK ] RGBDImage.FilterPyramid (0 ms)
+[ RUN      ] RGBDImage.CreatePyramid
+[       OK ] RGBDImage.CreatePyramid (0 ms)
+[----------] 8 tests from RGBDImage (1 ms total)
+
+[----------] 13 tests from TetraMesh
+[ RUN      ] TetraMesh.Constructor
+[       OK ] TetraMesh.Constructor (0 ms)
+[ RUN      ] TetraMesh.Clear
+[       OK ] TetraMesh.Clear (0 ms)
+[ RUN      ] TetraMesh.IsEmpty
+[       OK ] TetraMesh.IsEmpty (0 ms)
+[ RUN      ] TetraMesh.GetMinBound
+[       OK ] TetraMesh.GetMinBound (0 ms)
+[ RUN      ] TetraMesh.GetMaxBound
+[       OK ] TetraMesh.GetMaxBound (0 ms)
+[ RUN      ] TetraMesh.Transform
+[       OK ] TetraMesh.Transform (0 ms)
+[ RUN      ] TetraMesh.OperatorAppend
+[       OK ] TetraMesh.OperatorAppend (0 ms)
+[ RUN      ] TetraMesh.OperatorADD
+[       OK ] TetraMesh.OperatorADD (0 ms)
+[ RUN      ] TetraMesh.Purge
+[       OK ] TetraMesh.Purge (0 ms)
+[ RUN      ] TetraMesh.HasVertices
+[       OK ] TetraMesh.HasVertices (0 ms)
+[ RUN      ] TetraMesh.HasTetras
+[       OK ] TetraMesh.HasTetras (0 ms)
+[ RUN      ] TetraMesh.CreateFromPointCloud
+[       OK ] TetraMesh.CreateFromPointCloud (2 ms)
+[ RUN      ] TetraMesh.ExtractTriangleMesh
+[       OK ] TetraMesh.ExtractTriangleMesh (3 ms)
+[----------] 13 tests from TetraMesh (5 ms total)
+
+[----------] 42 tests from TriangleMesh
+[ RUN      ] TriangleMesh.Constructor
+[       OK ] TriangleMesh.Constructor (0 ms)
+[ RUN      ] TriangleMesh.Clear
+[       OK ] TriangleMesh.Clear (0 ms)
+[ RUN      ] TriangleMesh.IsEmpty
+[       OK ] TriangleMesh.IsEmpty (0 ms)
+[ RUN      ] TriangleMesh.GetMinBound
+[       OK ] TriangleMesh.GetMinBound (0 ms)
+[ RUN      ] TriangleMesh.GetMaxBound
+[       OK ] TriangleMesh.GetMaxBound (0 ms)
+[ RUN      ] TriangleMesh.Transform
+[       OK ] TriangleMesh.Transform (0 ms)
+[ RUN      ] TriangleMesh.OperatorAppend
+[       OK ] TriangleMesh.OperatorAppend (0 ms)
+[ RUN      ] TriangleMesh.OperatorADD
+[       OK ] TriangleMesh.OperatorADD (1 ms)
+[ RUN      ] TriangleMesh.ComputeTriangleNormals
+[       OK ] TriangleMesh.ComputeTriangleNormals (0 ms)
+[ RUN      ] TriangleMesh.ComputeVertexNormals
+[       OK ] TriangleMesh.ComputeVertexNormals (0 ms)
+[ RUN      ] TriangleMesh.ComputeAdjacencyList
+[       OK ] TriangleMesh.ComputeAdjacencyList (0 ms)
+[ RUN      ] TriangleMesh.Purge
+[       OK ] TriangleMesh.Purge (0 ms)
+[ RUN      ] TriangleMesh.MergeCloseVertices
+[       OK ] TriangleMesh.MergeCloseVertices (0 ms)
+[ RUN      ] TriangleMesh.SamplePointsUniformly
+[       OK ] TriangleMesh.SamplePointsUniformly (0 ms)
+[ RUN      ] TriangleMesh.FilterSharpen
+[       OK ] TriangleMesh.FilterSharpen (0 ms)
+[ RUN      ] TriangleMesh.FilterSmoothSimple
+[       OK ] TriangleMesh.FilterSmoothSimple (0 ms)
+[ RUN      ] TriangleMesh.FilterSmoothLaplacian
+[       OK ] TriangleMesh.FilterSmoothLaplacian (0 ms)
+[ RUN      ] TriangleMesh.FilterSmoothTaubin
+[       OK ] TriangleMesh.FilterSmoothTaubin (0 ms)
+[ RUN      ] TriangleMesh.HasVertices
+[       OK ] TriangleMesh.HasVertices (0 ms)
+[ RUN      ] TriangleMesh.HasTriangles
+[       OK ] TriangleMesh.HasTriangles (0 ms)
+[ RUN      ] TriangleMesh.HasVertexNormals
+[       OK ] TriangleMesh.HasVertexNormals (0 ms)
+[ RUN      ] TriangleMesh.HasVertexColors
+[       OK ] TriangleMesh.HasVertexColors (0 ms)
+[ RUN      ] TriangleMesh.HasTriangleNormals
+[       OK ] TriangleMesh.HasTriangleNormals (0 ms)
+[ RUN      ] TriangleMesh.NormalizeNormals
+[       OK ] TriangleMesh.NormalizeNormals (0 ms)
+[ RUN      ] TriangleMesh.PaintUniformColor
+[       OK ] TriangleMesh.PaintUniformColor (0 ms)
+[ RUN      ] TriangleMesh.EulerPoincareCharacteristic
+[       OK ] TriangleMesh.EulerPoincareCharacteristic (1 ms)
+[ RUN      ] TriangleMesh.IsEdgeManifold
+[       OK ] TriangleMesh.IsEdgeManifold (4 ms)
+[ RUN      ] TriangleMesh.IsVertexManifold
+[       OK ] TriangleMesh.IsVertexManifold (10 ms)
+[ RUN      ] TriangleMesh.IsSelfIntersecting
+[       OK ] TriangleMesh.IsSelfIntersecting (187 ms)
+[ RUN      ] TriangleMesh.ClusterConnectedTriangles
+[       OK ] TriangleMesh.ClusterConnectedTriangles (0 ms)
+[ RUN      ] TriangleMesh.RemoveTrianglesByMask
+[       OK ] TriangleMesh.RemoveTrianglesByMask (0 ms)
+[ RUN      ] TriangleMesh.DeformAsRigidAsPossible
+[       OK ] TriangleMesh.DeformAsRigidAsPossible (3 ms)
+[ RUN      ] TriangleMesh.IdenticallyColoredConnectedComponents
+[       OK ] TriangleMesh.IdenticallyColoredConnectedComponents (0 ms)
+[ RUN      ] TriangleMesh.SelectDownSample
+[       OK ] TriangleMesh.SelectDownSample (1 ms)
+[ RUN      ] TriangleMesh.CropTriangleMesh
+[       OK ] TriangleMesh.CropTriangleMesh (0 ms)
+[ RUN      ] TriangleMesh.CreateFromPointCloudPoisson
+[       OK ] TriangleMesh.CreateFromPointCloudPoisson (15 ms)
+[ RUN      ] TriangleMesh.CreateFromPointCloudAlphaShape
+[       OK ] TriangleMesh.CreateFromPointCloudAlphaShape (0 ms)
+[ RUN      ] TriangleMesh.CreateMeshSphere
+[       OK ] TriangleMesh.CreateMeshSphere (0 ms)
+[ RUN      ] TriangleMesh.CreateMeshCylinder
+[       OK ] TriangleMesh.CreateMeshCylinder (0 ms)
+[ RUN      ] TriangleMesh.CreateMeshCone
+[       OK ] TriangleMesh.CreateMeshCone (0 ms)
+[ RUN      ] TriangleMesh.CreateMeshArrow
+[       OK ] TriangleMesh.CreateMeshArrow (0 ms)
+[ RUN      ] TriangleMesh.CreateMeshCoordinateFrame
+[       OK ] TriangleMesh.CreateMeshCoordinateFrame (0 ms)
+[----------] 42 tests from TriangleMesh (224 ms total)
+
+[----------] 3 tests from VoxelGrid
+[ RUN      ] VoxelGrid.Bounds
+[       OK ] VoxelGrid.Bounds (0 ms)
+[ RUN      ] VoxelGrid.GetVoxel
+[       OK ] VoxelGrid.GetVoxel (0 ms)
+[ RUN      ] VoxelGrid.Visualization
+[       OK ] VoxelGrid.Visualization (0 ms)
+[----------] 3 tests from VoxelGrid (0 ms total)
+
+[----------] 4 tests from OctreeIO
+[ RUN      ] OctreeIO.EmptyTree
+[       OK ] OctreeIO.EmptyTree (2 ms)
+[ RUN      ] OctreeIO.ZeroDepth
+[       OK ] OctreeIO.ZeroDepth (0 ms)
+[ RUN      ] OctreeIO.JsonFileIOFragment
+[       OK ] OctreeIO.JsonFileIOFragment (405 ms)
+[ RUN      ] OctreeIO.JsonFileIOSevenCubes
+[       OK ] OctreeIO.JsonFileIOSevenCubes (2 ms)
+[----------] 4 tests from OctreeIO (409 ms total)
+
+[----------] 1 test from VoxelGridIO
+[ RUN      ] VoxelGridIO.PLYWriteRead
+[       OK ] VoxelGridIO.PLYWriteRead (0 ms)
+[----------] 1 test from VoxelGridIO (0 ms total)
+
+[----------] 2 tests from FileGLTF
+[ RUN      ] FileGLTF.WriteReadTriangleMeshFromGLTF
+[       OK ] FileGLTF.WriteReadTriangleMeshFromGLTF (1 ms)
+[ RUN      ] FileGLTF.WriteReadTriangleMeshFromGLB
+[       OK ] FileGLTF.WriteReadTriangleMeshFromGLB (0 ms)
+[----------] 2 tests from FileGLTF (1 ms total)
+
+[----------] 1 test from FileSTL
+[ RUN      ] FileSTL.WriteReadTriangleMeshFromSTL
+[       OK ] FileSTL.WriteReadTriangleMeshFromSTL (0 ms)
+[----------] 1 test from FileSTL (0 ms total)
+
+[----------] 2 tests from UniformTSDFVolume
+[ RUN      ] UniformTSDFVolume.Constructor
+[       OK ] UniformTSDFVolume.Constructor (61 ms)
+[ RUN      ] UniformTSDFVolume.RealData
+[       OK ] UniformTSDFVolume.RealData (132 ms)
+[----------] 2 tests from UniformTSDFVolume (193 ms total)
+
+[----------] 1 test from RGBDOdometryJacobianFromColorTerm
+[ RUN      ] RGBDOdometryJacobianFromColorTerm.ComputeJacobianAndResidual
+[       OK ] RGBDOdometryJacobianFromColorTerm.ComputeJacobianAndResidual (0 ms)
+[----------] 1 test from RGBDOdometryJacobianFromColorTerm (1 ms total)
+
+[----------] 1 test from RGBDOdometryJacobianFromHybridTerm
+[ RUN      ] RGBDOdometryJacobianFromHybridTerm.ComputeJacobianAndResidual
+[       OK ] RGBDOdometryJacobianFromHybridTerm.ComputeJacobianAndResidual (0 ms)
+[----------] 1 test from RGBDOdometryJacobianFromHybridTerm (0 ms total)
+
+[----------] 1 test from Logger
+[ RUN      ] Logger.LogError
+[       OK ] Logger.LogError (0 ms)
+[----------] 1 test from Logger (0 ms total)
+
+[----------] 7 tests from Eigen
+[ RUN      ] Eigen.TransformVector6dToMatrix4d
+[       OK ] Eigen.TransformVector6dToMatrix4d (0 ms)
+[ RUN      ] Eigen.TransformMatrix4dToVector6d
+[       OK ] Eigen.TransformMatrix4dToVector6d (0 ms)
+[ RUN      ] Eigen.SolveLinearSystemPSD
+[1;33m[Open3D WARNING] check_det failed, empty vector will be returned
+[0;m[1;33m[Open3D WARNING] check_symmetric failed, empty vector will be returned
+[0;m[1;33m[Open3D WARNING] check_symmetric failed, empty vector will be returned
+[0;m[       OK ] Eigen.SolveLinearSystemPSD (0 ms)
+[ RUN      ] Eigen.SolveJacobianSystemAndObtainExtrinsicMatrix
+[       OK ] Eigen.SolveJacobianSystemAndObtainExtrinsicMatrix (16 ms)
+[ RUN      ] Eigen.SolveJacobianSystemAndObtainExtrinsicMatrixArray
+[       OK ] Eigen.SolveJacobianSystemAndObtainExtrinsicMatrixArray (20 ms)
+[ RUN      ] Eigen.ComputeJTJandJTr
+[       OK ] Eigen.ComputeJTJandJTr (0 ms)
+[ RUN      ] Eigen.ComputeJTJandJTr_vector
+[       OK ] Eigen.ComputeJTJandJTr_vector (0 ms)
+[----------] 7 tests from Eigen (36 ms total)
+
+[----------] 13 tests from FileSystem
+[ RUN      ] FileSystem.GetFileExtensionInLowerCase
+[       OK ] FileSystem.GetFileExtensionInLowerCase (0 ms)
+[ RUN      ] FileSystem.GetFileNameWithoutExtension
+[       OK ] FileSystem.GetFileNameWithoutExtension (0 ms)
+[ RUN      ] FileSystem.GetFileNameWithoutDirectory
+[       OK ] FileSystem.GetFileNameWithoutDirectory (0 ms)
+[ RUN      ] FileSystem.GetFileParentDirectory
+[       OK ] FileSystem.GetFileParentDirectory (0 ms)
+[ RUN      ] FileSystem.GetRegularizedDirectoryName
+[       OK ] FileSystem.GetRegularizedDirectoryName (0 ms)
+[ RUN      ] FileSystem.ChangeWorkingDirectory
+[       OK ] FileSystem.ChangeWorkingDirectory (0 ms)
+[ RUN      ] FileSystem.DirectoryExists
+[       OK ] FileSystem.DirectoryExists (0 ms)
+[ RUN      ] FileSystem.MakeDirectory
+[       OK ] FileSystem.MakeDirectory (0 ms)
+[ RUN      ] FileSystem.MakeDirectoryHierarchy
+[       OK ] FileSystem.MakeDirectoryHierarchy (1 ms)
+[ RUN      ] FileSystem.DeleteDirectory
+[       OK ] FileSystem.DeleteDirectory (0 ms)
+[ RUN      ] FileSystem.File_Exists_Remove
+[       OK ] FileSystem.File_Exists_Remove (0 ms)
+[ RUN      ] FileSystem.ListFilesInDirectory
+[       OK ] FileSystem.ListFilesInDirectory (1 ms)
+[ RUN      ] FileSystem.ListFilesInDirectoryWithExtension
+[       OK ] FileSystem.ListFilesInDirectoryWithExtension (1 ms)
+[----------] 13 tests from FileSystem (3 ms total)
+
+[----------] 7 tests from IJsonConvertible
+[ RUN      ] IJsonConvertible.EigenVector3dToFromJsonArray
+[       OK ] IJsonConvertible.EigenVector3dToFromJsonArray (9 ms)
+[ RUN      ] IJsonConvertible.EigenVector4dToFromJsonArray
+[       OK ] IJsonConvertible.EigenVector4dToFromJsonArray (12 ms)
+[ RUN      ] IJsonConvertible.EigenMatrix3dToFromJsonArray
+[       OK ] IJsonConvertible.EigenMatrix3dToFromJsonArray (27 ms)
+[ RUN      ] IJsonConvertible.EigenMatrix4dToFromJsonArray
+[       OK ] IJsonConvertible.EigenMatrix4dToFromJsonArray (49 ms)
+[ RUN      ] IJsonConvertible.EigenMatrix4d_uToFromJsonArray
+[       OK ] IJsonConvertible.EigenMatrix4d_uToFromJsonArray (51 ms)
+[ RUN      ] IJsonConvertible.EigenMatrix6dToFromJsonArray
+[       OK ] IJsonConvertible.EigenMatrix6dToFromJsonArray (119 ms)
+[ RUN      ] IJsonConvertible.EigenMatrix6d_uToFromJsonArray
+[       OK ] IJsonConvertible.EigenMatrix6d_uToFromJsonArray (117 ms)
+[----------] 7 tests from IJsonConvertible (413 ms total)
+
+[----------] Global test environment tear-down
+[==========] 233 tests from 25 test suites ran. (2843 ms total)
+[  PASSED  ] 233 tests.
+
+  YOU HAVE 243 DISABLED TESTS
+

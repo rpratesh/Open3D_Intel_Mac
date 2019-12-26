@@ -15,7 +15,10 @@ Open3D is an open-source library that supports rapid development of software tha
 * Cpp and Python Unit tests are integrated at respective unittest folders
 
 ##### How to build (Mac-OS)
-* Clone this git repo to your local system (say, $OPEN3D_REPO)
+* Clone (recursively) this git repo to your local system (say, $OPEN3D_REPO)
+```bash
+  git clone --recursive https://github.com/rpratesh/Open3D_IntelHW.git
+```
 * Run *util/scripts/install-deps-osx.sh*. Use homebrew to manage dependencies
 ```bash
   cd $OPEN3D_REPO
@@ -25,13 +28,13 @@ Open3D is an open-source library that supports rapid development of software tha
   sudo cmake -DPYTHON_INCLUDE_DIR=/usr/local/bin/python3 -DBUILD_UNIT_TESTS=ON  ..
   sudo make -j$(sysctl -n hw.physicalcpu)
   #Remove any previously installed open3d python packages
-  sudo pip uninstall open3d
+  sudo pip3 uninstall open3d
   # Create Python package in build/lib/python_package
   sudo make python-package
   #Install python package
   sudo pip3 install -e lib/python_package/
   #Check python installation
-  python -c "import open3d"
+  python3 -c "import open3d"
   #Install the Open3D as a C++ library (headers and binaries):
   sudo make install
   #Run cpp unittest
@@ -43,8 +46,8 @@ Open3D is an open-source library that supports rapid development of software tha
   #Run cpp example
   ./bin/examples/Solution ../test_mesh.ply ../results_cpp.txt
   #Run python example
-  python3 ../examples/Python/solution.cpp ../test_mesh.ply ../results_py.txt
-
+  python3 ../examples/Python/Basic/solution.py ../test_mesh.ply ../results_py.txt
+ 
 ```
   
 

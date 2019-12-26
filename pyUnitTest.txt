@@ -1,0 +1,22 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.7.4, pytest-5.3.2, py-1.8.0, pluggy-0.13.1
+rootdir: /Users/pratesh/pratesh_personal/assign_intel/homework-task/open3d_2/Open3D
+collected 49 items
+
+../src/UnitTest/Python/test_octree.py .........
+../src/UnitTest/Python/test_open3d_eigen.py ......................................
+o3d.utility.Vector3dVector: (2000000, 3)
+open3d -> numpy: 0.010055s
+numpy -> open3d: 0.000024s
+
+o3d.utility.Vector3iVector: (2000000, 3)
+open3d -> numpy: 0.004820s
+numpy -> open3d: 0.003429s
+
+o3d.utility.Vector2iVector: (2000000, 3)
+open3d -> numpy: 0.010546s
+numpy -> open3d: 0.004153s
+.
+../src/UnitTest/Python/test_solution.py .
+
+============================== 49 passed in 2.84s ==============================

@@ -16,8 +16,8 @@ Function to print the output to file in format specified in assignment.pdf
 def print_cc_file(conn_components,filename):
     file = open(filename,"w")
     for vector in conn_components:
-        vector_str = (str(list(vector))+"\n")
-        file.write(vector_str.replace("[","").replace("]",""))
+        vector_str = str(list(vector))+"\n"
+        file.write(vector_str.replace(", "," ").replace("]","").replace("[",""))
     file.close()
 
 # Read triangle mesh "test_mesh.ply"
