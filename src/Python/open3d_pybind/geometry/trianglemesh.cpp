@@ -72,6 +72,9 @@ void pybind_trianglemesh(py::module &m) {
                  "Function to compute triangle normals, usually called before "
                  "rendering",
                  "normalized"_a = true)
+            .def("identically_colored_connected_components",
+                &geometry::TriangleMesh::IdenticallyColoredConnectedComponents,
+                "Find connected components with same colored vertices")
             .def("compute_vertex_normals",
                  &geometry::TriangleMesh::ComputeVertexNormals,
                  "Function to compute vertex normals, usually called before "
@@ -453,6 +456,8 @@ void pybind_trianglemesh(py::module &m) {
                                     "compute_triangle_normals");
     docstring::ClassMethodDocInject(m, "TriangleMesh",
                                     "compute_vertex_normals");
+    docstring::ClassMethodDocInject(m, "TriangleMesh",
+                                    "identically_colored_connected_components");
     docstring::ClassMethodDocInject(m, "TriangleMesh", "has_adjacency_list");
     docstring::ClassMethodDocInject(
             m, "TriangleMesh", "has_triangle_normals",

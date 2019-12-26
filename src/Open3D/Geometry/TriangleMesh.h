@@ -79,7 +79,7 @@ public:
     bool HasTriangleUvs() const {
         return HasTriangles() && triangle_uvs_.size() == 3 * triangles_.size();
     }
-
+    
     bool HasTexture() const { return !texture_.IsEmpty(); }
 
     TriangleMesh &NormalizeNormals() {
@@ -368,6 +368,13 @@ public:
     /// cluster, and a third vector contains the surface area per cluster.
     std::tuple<std::vector<int>, std::vector<size_t>, std::vector<double>>
     ClusterConnectedTriangles() const;
+
+    /// Returns a vector of identically-colored component.
+    /// An identically-colored connected component consists of spatially connected vertices with the same color.
+    /// A connected component is represented by a vector of vertices' indices
+    /// This method uses breadth-first search to traverse the graph(or mesh) and find the connected components
+    /// with identical color
+    std::vector<std::vector<int>> IdenticallyColoredConnectedComponents();
 
     /// \brief This function removes the triangles with index in
     /// \p triangle_indices. Call \ref RemoveUnreferencedVertices to clean up

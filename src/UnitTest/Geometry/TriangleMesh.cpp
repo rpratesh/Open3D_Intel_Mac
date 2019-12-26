@@ -1372,6 +1372,28 @@ TEST(TriangleMesh, DeformAsRigidAsPossible) {
     ExpectEQ(*mesh_deform, mesh_gt);
 }
 
+/*
+Unit test for testing IdenticallyColoredConnectedComponents()
+The test case is the mesh that is given as an example in assignment.pdf (Intel ISL assignment)
+*/
+
+TEST(TriangleMesh,IdenticallyColoredConnectedComponents) {
+    geometry::TriangleMesh mesh;
+    mesh.vertices_ = {
+    {0.000000, 1.000000, 0.000000},{0.000000, 2.000000, 0.000000},
+    {1.000000, 0.500000, 0.000000},{1.000000, 1.500000, 0.000000},{1.000000, 2.500000, 0.000000},
+    {2.000000, 1.000000, 0.000000},{2.000000, 2.000000, 0.000000}
+    };
+    mesh.triangles_ = {{0, 2, 3}, {0, 3, 1}, {1, 3, 4}, {2, 5, 3}, {3, 5, 6}, {3, 6, 4}};
+    mesh.vertex_colors_ = {{1,0,0},{0,1,0},{0,0,1},{1,0,0},{0,1,0},{1,0,0},{1,0,0}};
+
+    std::vector<std::vector<int>> conn_components_gt = {{0, 3, 5, 6}, {1, 4}, {2}};
+    auto conn_components_res = mesh.IdenticallyColoredConnectedComponents();
+    for(size_t i = 0; i < conn_components_gt.size() ; i++){
+        EXPECT_EQ(conn_components_gt[i],conn_components_res[i]);
+    }
+}
+
 TEST(TriangleMesh, SelectDownSample) {
     vector<Vector3d> ref_vertices = {{349.019608, 803.921569, 917.647059},
                                      {439.215686, 117.647059, 588.235294},

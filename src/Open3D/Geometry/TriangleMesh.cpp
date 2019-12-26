@@ -36,6 +36,8 @@
 #include <queue>
 #include <random>
 #include <tuple>
+#include <iostream>
+#include <list> 
 
 #ifdef _OPENMP
 #include <omp.h>
@@ -55,6 +57,7 @@ TriangleMesh &TriangleMesh::Clear() {
     texture_.Clear();
     return *this;
 }
+
 
 TriangleMesh &TriangleMesh::Transform(const Eigen::Matrix4d &transformation) {
     MeshBase::Transform(transformation);
@@ -1557,6 +1560,54 @@ TriangleMesh::ComputeEdgeWeightsCot(
         }
     }
     return weights;
+}
+
+/*
+Utility function used in sorting. 
+Sort a vector of vectors, based on the first elemet of each vector
+*/
+bool sortfn( const std::vector<int>& v1, 
+			const std::vector<int>& v2 ) { 
+return v1[0] < v2[0]; 
+}
+
+std::vector<std::vector<int>> TriangleMesh::IdenticallyColoredConnectedComponents(){
+    std::vector<std::vector<int>> connected_components; //Holds connected components - result
+    char *visited; //An array that maintains a record of vertices that are visited : 0 - Not visited, 1 - Visited
+    visited = (char*) calloc(vertices_.size(),sizeof(char));
+
+    std::list<int> queue; // Create a queue for BFS
+
+    if (!(HasAdjacencyList())){
+        ComputeAdjacencyList();  //Need adjacency list for BFS
+    }
+
+    for (int vidx = 0; vidx < vertices_.size(); ++vidx){
+        if (visited[vidx] == 0){  //If vetex in not yet visited
+            auto vcolor = vertex_colors_[vidx];
+            visited[vidx] = 1;   //Mark the vertex as visited
+            queue.push_back(vidx);   //Push the vertex to queue
+            std::vector<int> connected_component;  //To hold the connected comp. of vertex at vidx
+            while(!queue.empty()){
+                int s = queue.front(); //take next vertex in the queue
+                connected_component.push_back(s);
+                queue.pop_front();
+                for (auto it = adjacency_list_[s].begin(); it != adjacency_list_[s].end(); ++it){ 
+                    //Push all the vertices in queue, that are connected to vetex s and similar to the color of s
+                    if (visited[*it] == 0 && vertex_colors_[*it] == vcolor){
+                        visited[*it] = 1; 
+                        queue.push_back(*it); 
+                    }   
+                }
+            }
+            std::sort(connected_component.begin(),connected_component.end()); //Sort each connected comp.
+            connected_components.push_back(connected_component);
+        }
+    }
+    free(visited);
+    //Sort lists ascendingly by the smallest element in each vector
+    std::sort(connected_components.begin(),connected_components.end(),sortfn);
+    return connected_components;
 }
 
 }  // namespace geometry

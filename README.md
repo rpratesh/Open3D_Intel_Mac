@@ -4,19 +4,49 @@
 
 # Open3D: A Modern Library for 3D Data Processing
 
-<h4>
-    <a href="http://www.open3d.org">open3d.org</a> |
-    <a href="http://www.open3d.org/docs">Documentation</a> |
-    <a href="http://www.open3d.org/docs/release/getting_started.html">Quick Start</a> |
-    <a href="http://www.open3d.org/docs/release/compilation.html">Build from Source</a> |
-    <a href="http://www.open3d.org/docs/release/index.html#python-api-index">Python API</a> |
-    <a href="http://www.open3d.org/docs/release/cpp_api/index.html">C++ API</a> |
-    <a href="http://www.open3d.org/docs/release/contribute.html">Contribute</a> |
-    <a href="https://www.youtube.com/watch?v=I3UjXlA4IsU">Demo</a> |
-    <a href="https://forum.open3d.org">Forum</a>
-</h4>
-
 Open3D is an open-source library that supports rapid development of software that deals with 3D data. The Open3D frontend exposes a set of carefully selected data structures and algorithms in both C++ and Python. The backend is highly optimized and is set up for parallelization. We welcome contributions from the open-source community.
+
+## Added new feature (Assignment)
+##### Identically Colored Connected Components
+* Implemented a cpp function open3d::geometry::TriangleMesh::IdenticallyColoredConnectedComponents() that returns list of identically connected components
+* The returned list is sorted ascendingly by the smallest element in each list and and within each list, the vertices are sorted ascendingly by their indices.
+* open3d.geometry.TriangleMesh.identically_colored_connected_components : A python binding of above cpp function is also provided
+* solution.py and Solution.cpp are provided in examples folder for showing usage
+* Cpp and Python Unit tests are integrated at respective unittest folders
+
+##### How to build (Mac-OS)
+* Clone this git repo to your local system (say, $OPEN3D_REPO)
+* Run *util/scripts/install-deps-osx.sh*. Use homebrew to manage dependencies
+```bash
+  cd $OPEN3D_REPO
+  mkdir build
+  cd build
+  #sudo may be needed to install Open3D to a system location.
+  sudo cmake -DPYTHON_INCLUDE_DIR=/usr/local/bin/python3 -DBUILD_UNIT_TESTS=ON  ..
+  sudo make -j$(sysctl -n hw.physicalcpu)
+  #Remove any previously installed open3d python packages
+  sudo pip uninstall open3d
+  # Create Python package in build/lib/python_package
+  sudo make python-package
+  #Install python package
+  sudo pip3 install -e lib/python_package/
+  #Check python installation
+  python -c "import open3d"
+  #Install the Open3D as a C++ library (headers and binaries):
+  sudo make install
+  #Run cpp unittest
+  ./bin/unitTests
+  #Before running python unit-test
+  pip3 install pytest
+  #Run python unittest
+  pytest -s ../src/UnitTest/Python/
+  #Run cpp example
+  ./bin/examples/Solution ../test_mesh.ply ../results_cpp.txt
+  #Run python example
+  python3 ../examples/Python/solution.cpp ../test_mesh.ply ../results_py.txt
+
+```
+  
 
 ## Core features
 
@@ -25,13 +55,7 @@ Open3D is an open-source library that supports rapid development of software tha
 * Scene reconstruction
 * Surface alignment
 * 3D visualization
-* Python binding
-
-## Supported OSes and compilers
-
-* Ubuntu 16.04 or newer: GCC 5.x or newer [![Build Status](https://travis-ci.org/intel-isl/Open3D.svg?branch=master)](https://travis-ci.org/intel-isl/Open3D)
-* macOS: XCode 8.0 or newer [![Build Status](https://travis-ci.org/intel-isl/Open3D.svg?branch=master)](https://travis-ci.org/intel-isl/Open3D)
-* Windows: Visual Studio 2017 or newer [![Build status](https://ci.appveyor.com/api/projects/status/3hasjo041lv6srsi/branch/master?svg=true)](https://ci.appveyor.com/project/yxlao/open3d/branch/master)
+* Python binding 
 
 ## Citation
 Please cite [our work](https://arxiv.org/abs/1801.09847) if you use Open3D.
