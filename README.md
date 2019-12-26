@@ -14,6 +14,8 @@ Open3D is an open-source library that supports rapid development of software tha
 * solution.py and Solution.cpp are provided in examples folder for showing usage
 * Cpp and Python Unit tests are integrated at respective unittest folders
 
+The algorithm (Breadth-First-Search) followed to find connected components has been explained in respective code sections (as comments). Please read them
+
 ##### How to build (Mac-OS)
 * Clone (recursively) this git repo to your local system (say, $OPEN3D_REPO)
 ```bash
